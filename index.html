@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 meses</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #e6e1d8;
+      color: #241f1b;
+    }
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #f6f3ee;
+      padding: 12px 12px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .dos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .dos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 4;
+    }
+    .abrazo { object-position: center 34%; }
+    .malteada { object-position: center 30%; }
+    p {
+      margin: 10px 0 4px;
+      font: 500 16px/1.3 "Segoe UI", system-ui, sans-serif;
+    }
+    @media (min-width: 800px) {
+      body { padding: 28px 0 40px; }
+      main { padding: 16px 16px 26px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="fotos/mirador.jpg" alt="Los dos en el mirador.">
+    <img src="fotos/mallas.jpg" alt="Los dos en las mallas.">
+    <img src="fotos/mesa.jpg" alt="La mesa, con el casco.">
+    <img src="fotos/camisetas.jpg" alt="Las dos camisetas.">
+    <img src="fotos/luces.jpg" alt="La noche de las luces.">
+    <img src="fotos/beso.jpg" alt="El beso.">
+    <div class="dos">
+      <img class="abrazo" src="fotos/abrazo.jpg" alt="El abrazo.">
+      <img class="malteada" src="fotos/malteada.jpg" alt="La malteada.">
+    </div>
+    <p>4 meses. 20 de noviembre.</p>
+  </main>
+</body>
+</html>
