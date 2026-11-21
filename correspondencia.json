@@ -1,0 +1,208 @@
+{
+  "total": 29,
+  "etapa": 1,
+  "estado": "provisional",
+  "composicion_definitiva": false,
+  "recibidas": [
+    "FOTO_01",
+    "FOTO_02",
+    "FOTO_03",
+    "FOTO_04",
+    "FOTO_05",
+    "FOTO_06",
+    "FOTO_07",
+    "FOTO_08",
+    "FOTO_09",
+    "FOTO_10",
+    "FOTO_11",
+    "FOTO_12",
+    "FOTO_13",
+    "FOTO_14",
+    "FOTO_15",
+    "FOTO_16",
+    "FOTO_17",
+    "FOTO_18",
+    "FOTO_19",
+    "FOTO_20"
+  ],
+  "pendientes": [
+    "FOTO_21",
+    "FOTO_22",
+    "FOTO_23",
+    "FOTO_24",
+    "FOTO_25",
+    "FOTO_26",
+    "FOTO_27",
+    "FOTO_28",
+    "FOTO_29"
+  ],
+  "nota": "Las primeras 20 fotografías quedan fijas. La segunda carga debe integrarse sin eliminarlas, reemplazarlas ni modificarlas. La composición asimétrica espera a las 29.",
+  "fotos": [
+    {
+      "id": "FOTO_01",
+      "archivo": "fotos/foto-01.jpg",
+      "sha256": "58e58179c05ee21e324f65e0276cd538c30e50df83fd5201c36ab9ec83cdd3e2",
+      "ancho": 1600,
+      "alto": 719,
+      "alt": "Los dos con las camisetas de Spider-Man, en el centro comercial.",
+      "misma_escena_que_archivo_anterior": "fotos/camisetas.jpg"
+    },
+    {
+      "id": "FOTO_02",
+      "archivo": "fotos/foto-02.jpg",
+      "sha256": "337cab1b7ef23a507a022f3bce11b2f719dcb9966cbdcbc384d5c1aee2225803",
+      "ancho": 1600,
+      "alto": 719,
+      "alt": "Selfie en casa: camiseta amarilla y vestido de flores."
+    },
+    {
+      "id": "FOTO_03",
+      "archivo": "fotos/foto-03.jpg",
+      "sha256": "b445aea3a4a707c03d5a9b89ef8b5b692b8f75c6df137ad1639c9ec3b11b86d1",
+      "ancho": 719,
+      "alto": 1600,
+      "alt": "La malteada, con la camiseta de Batman.",
+      "misma_escena_que_archivo_anterior": "fotos/malteada.jpg"
+    },
+    {
+      "id": "FOTO_04",
+      "archivo": "fotos/foto-04.jpg",
+      "sha256": "25270c10600fa4fd2469caa20b69d21182fea40040a785efa1c5c71914ab5cc5",
+      "ancho": 1600,
+      "alto": 989,
+      "alt": "Los dos entre las mallas.",
+      "misma_escena_que_archivo_anterior": "fotos/mallas.jpg"
+    },
+    {
+      "id": "FOTO_05",
+      "archivo": "fotos/foto-05.jpg",
+      "sha256": "6b68cec813736a86c10e0a91302b7d3da79e5bc73153221c8e09e227abf93152",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "Ella recostada sobre él, en el piso."
+    },
+    {
+      "id": "FOTO_06",
+      "archivo": "fotos/foto-06.jpg",
+      "sha256": "2d5c3d994f43f17cf8f5e5a16fe9668b19aa669139ce4a2cfa4f6b7f86b5427a",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "En las butacas del cine."
+    },
+    {
+      "id": "FOTO_07",
+      "archivo": "fotos/foto-07.jpg",
+      "sha256": "6ced1b035f23011cabe4deea81c8bcd3bdbae33ca51f5fb875cc67931b06ba54",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "La mesa, con las plantas, la Pepsi y el casco.",
+      "misma_escena_que_archivo_anterior": "fotos/mesa.jpg"
+    },
+    {
+      "id": "FOTO_08",
+      "archivo": "fotos/foto-08.jpg",
+      "sha256": "e418c694ec05050e8c2e847fc15f23ea81d4fd4d70128007de201bca7aefa9e6",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "De noche, con la camiseta de Los Ángeles."
+    },
+    {
+      "id": "FOTO_09",
+      "archivo": "fotos/foto-09.jpg",
+      "sha256": "8945cb89dcedc7c5732de0adf841a93ae7b764eebf9457175641c798c94471a7",
+      "ancho": 1584,
+      "alto": 891,
+      "alt": "En el balcón de noche, con el casco sobre la mesa."
+    },
+    {
+      "id": "FOTO_10",
+      "archivo": "fotos/foto-10.jpg",
+      "sha256": "315b42a46dd9ce3bc2f233cf657c5590d5ebd53f546b47f35bd64ffae3d5b8ff",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "En la arena de noche, con el casco."
+    },
+    {
+      "id": "FOTO_11",
+      "archivo": "fotos/foto-11.jpg",
+      "sha256": "768bd1d971ba4c38ded52e5e6025b06ef6eb7bc7914862e88ed075305f978823",
+      "ancho": 900,
+      "alto": 1600,
+      "alt": "Entre las piedras del río."
+    },
+    {
+      "id": "FOTO_12",
+      "archivo": "fotos/foto-12.jpg",
+      "sha256": "4d63afb5524d1fc5e42f2520c6edea6948ba690ba29466d9df0fc7a2ef7dcb53",
+      "ancho": 1570,
+      "alto": 883,
+      "alt": "En el parqueadero de noche."
+    },
+    {
+      "id": "FOTO_13",
+      "archivo": "fotos/foto-13.jpg",
+      "sha256": "5601330608e72c92a5eb76639b5ce9034095522a3b0e203a52b374308e296cd3",
+      "ancho": 1556,
+      "alto": 875,
+      "alt": "Un beso en la mejilla, de noche."
+    },
+    {
+      "id": "FOTO_14",
+      "archivo": "fotos/foto-14.jpg",
+      "sha256": "022331f539672675178459f96c7e4567da2874b95fc86eaf786def6003a3d23a",
+      "ancho": 892,
+      "alto": 1585,
+      "alt": "Frente al edificio de listones de madera, con el casco."
+    },
+    {
+      "id": "FOTO_15",
+      "archivo": "fotos/foto-15.jpg",
+      "sha256": "cd9e5e1e9058c46768ab6f9d7bf1b2e9037c97144883fe3f2ff29b9325808288",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "En el local de neón."
+    },
+    {
+      "id": "FOTO_16",
+      "archivo": "fotos/foto-16.jpg",
+      "sha256": "92419d64eb7c19af78a7bfaee8713fde83bf04f9142f11b7ced9f3ecf702890c",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "Riendo en la plaza de noche."
+    },
+    {
+      "id": "FOTO_17",
+      "archivo": "fotos/foto-17.jpg",
+      "sha256": "ecc6c10f0e61675647be856f9d52a64e6711f6271cc92404f6a25941d793b72f",
+      "ancho": 1556,
+      "alto": 875,
+      "alt": "En la plaza de noche, de frente."
+    },
+    {
+      "id": "FOTO_18",
+      "archivo": "fotos/foto-18.jpg",
+      "sha256": "87bff3239a48312f453adb61fa776aee84f836cac8e39b1c29100fe4ad111f16",
+      "ancho": 840,
+      "alto": 1493,
+      "alt": "El beso de pie.",
+      "misma_escena_que_archivo_anterior": "fotos/beso.jpg"
+    },
+    {
+      "id": "FOTO_19",
+      "archivo": "fotos/foto-19.jpg",
+      "sha256": "8cda5e719c06a773093efa349f6d929e841d6417c59679b4a23ce3cdba124682",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "La noche de las luces.",
+      "misma_escena_que_archivo_anterior": "fotos/luces.jpg"
+    },
+    {
+      "id": "FOTO_20",
+      "archivo": "fotos/foto-20.jpg",
+      "sha256": "75ccb35b9993994fc4af8be7af69386b2cc26ec9cf5678b10205330feb78b83e",
+      "ancho": 1508,
+      "alto": 848,
+      "alt": "Contra el muro de ladrillo."
+    }
+  ]
+}

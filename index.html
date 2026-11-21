@@ -20,47 +20,167 @@
       flex-direction: column;
       gap: 8px;
     }
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .nota,
+    .cierre {
+      margin: 0;
+      font: 500 16px/1.35 "Segoe UI", system-ui, sans-serif;
     }
-    .dos {
+    .nota {
+      color: #6d645b;
+      font-size: 14px;
+    }
+    .collage {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 8px;
+      align-items: start;
     }
-    .dos img {
+    /*
+      Mapa de colocación.
+      Cada fotografía tiene el mismo HTML. Para reorganizar
+      el collage se cambia solo este bloque, no cada imagen.
+      Estado provisional (20 de 29): todas ocupan una celda.
+      La composición asimétrica espera a FOTO_21–FOTO_29.
+    */
+    .collage .foto {
+      grid-column: span 1;
+      position: relative;
+      margin: 0;
+      aspect-ratio: 1;
+      overflow: hidden;
+    }
+    .collage img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      aspect-ratio: 3 / 4;
     }
-    .abrazo { object-position: center 34%; }
-    .malteada { object-position: center 30%; }
-    p {
-      margin: 10px 0 4px;
-      font: 500 16px/1.3 "Segoe UI", system-ui, sans-serif;
+    .collage img:not([src]) {
+      display: none;
+    }
+    .collage .foto:has(img:not([src])) {
+      border: 1px dashed #b7aea3;
+      display: grid;
+      place-items: center;
+    }
+    .collage .foto:has(img:not([src]))::before {
+      content: "FOTO_" attr(data-foto);
+      font: 500 12px/1 "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0.04em;
+      color: #8a8178;
     }
     @media (min-width: 800px) {
       body { padding: 28px 0 40px; }
-      main { padding: 16px 16px 26px; }
+      main {
+        max-width: 980px;
+        padding: 16px 16px 26px;
+      }
+      .collage {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
   </style>
 </head>
 <body>
   <main>
-    <img src="fotos/mirador.jpg" alt="Los dos en el mirador.">
-    <img src="fotos/mallas.jpg" alt="Los dos en las mallas.">
-    <img src="fotos/mesa.jpg" alt="La mesa, con el casco.">
-    <img src="fotos/camisetas.jpg" alt="Las dos camisetas.">
-    <img src="fotos/luces.jpg" alt="La noche de las luces.">
-    <img src="fotos/beso.jpg" alt="El beso.">
-    <div class="dos">
-      <img class="abrazo" src="fotos/abrazo.jpg" alt="El abrazo.">
-      <img class="malteada" src="fotos/malteada.jpg" alt="La malteada.">
-    </div>
-    <p>4 meses. 20 de noviembre.</p>
+    <p class="nota">Veinte fotografías identificadas. El collage sigue abierto: faltan las nueve restantes.</p>
+    <!--
+      29 figuras con la misma estructura, en orden FOTO_01 a FOTO_29.
+      Este orden es la identidad de cada foto. No se reordena el HTML
+      para componer: la colocación vive en el mapa CSS de .collage.
+      FOTO_21 a FOTO_29 están reservadas y todavía no tienen archivo.
+    -->
+    <section class="collage" aria-label="Collage en preparación, veinte de veintinueve fotografías">
+      <figure class="foto" data-foto="01">
+        <img src="fotos/foto-01.jpg" alt="Los dos con las camisetas de Spider-Man, en el centro comercial." width="1600" height="719">
+      </figure>
+      <figure class="foto" data-foto="02">
+        <img src="fotos/foto-02.jpg" alt="Selfie en casa: camiseta amarilla y vestido de flores." width="1600" height="719">
+      </figure>
+      <figure class="foto" data-foto="03">
+        <img src="fotos/foto-03.jpg" alt="La malteada, con la camiseta de Batman." width="719" height="1600">
+      </figure>
+      <figure class="foto" data-foto="04">
+        <img src="fotos/foto-04.jpg" alt="Los dos entre las mallas." width="1600" height="989">
+      </figure>
+      <figure class="foto" data-foto="05">
+        <img src="fotos/foto-05.jpg" alt="Ella recostada sobre él, en el piso." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="06">
+        <img src="fotos/foto-06.jpg" alt="En las butacas del cine." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="07">
+        <img src="fotos/foto-07.jpg" alt="La mesa, con las plantas, la Pepsi y el casco." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="08">
+        <img src="fotos/foto-08.jpg" alt="De noche, con la camiseta de Los Ángeles." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="09">
+        <img src="fotos/foto-09.jpg" alt="En el balcón de noche, con el casco sobre la mesa." width="1584" height="891">
+      </figure>
+      <figure class="foto" data-foto="10">
+        <img src="fotos/foto-10.jpg" alt="En la arena de noche, con el casco." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="11">
+        <img src="fotos/foto-11.jpg" alt="Entre las piedras del río." width="900" height="1600">
+      </figure>
+      <figure class="foto" data-foto="12">
+        <img src="fotos/foto-12.jpg" alt="En el parqueadero de noche." width="1570" height="883">
+      </figure>
+      <figure class="foto" data-foto="13">
+        <img src="fotos/foto-13.jpg" alt="Un beso en la mejilla, de noche." width="1556" height="875">
+      </figure>
+      <figure class="foto" data-foto="14">
+        <img src="fotos/foto-14.jpg" alt="Frente al edificio de listones de madera, con el casco." width="892" height="1585">
+      </figure>
+      <figure class="foto" data-foto="15">
+        <img src="fotos/foto-15.jpg" alt="En el local de neón." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="16">
+        <img src="fotos/foto-16.jpg" alt="Riendo en la plaza de noche." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="17">
+        <img src="fotos/foto-17.jpg" alt="En la plaza de noche, de frente." width="1556" height="875">
+      </figure>
+      <figure class="foto" data-foto="18">
+        <img src="fotos/foto-18.jpg" alt="El beso de pie." width="840" height="1493">
+      </figure>
+      <figure class="foto" data-foto="19">
+        <img src="fotos/foto-19.jpg" alt="La noche de las luces." width="1600" height="900">
+      </figure>
+      <figure class="foto" data-foto="20">
+        <img src="fotos/foto-20.jpg" alt="Contra el muro de ladrillo." width="1508" height="848">
+      </figure>
+      <figure class="foto" data-foto="21">
+        <img alt="FOTO_21. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="22">
+        <img alt="FOTO_22. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="23">
+        <img alt="FOTO_23. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="24">
+        <img alt="FOTO_24. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="25">
+        <img alt="FOTO_25. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="26">
+        <img alt="FOTO_26. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="27">
+        <img alt="FOTO_27. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="28">
+        <img alt="FOTO_28. Pendiente de la segunda carga.">
+      </figure>
+      <figure class="foto" data-foto="29">
+        <img alt="FOTO_29. Pendiente de la segunda carga.">
+      </figure>
+    </section>
+    <p class="cierre">4 meses. 20 de noviembre.</p>
   </main>
 </body>
 </html>
