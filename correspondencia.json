@@ -1,8 +1,8 @@
 {
   "total": 29,
-  "etapa": 1,
-  "estado": "provisional",
-  "composicion_definitiva": false,
+  "etapa": 2,
+  "estado": "completo",
+  "composicion_definitiva": true,
   "recibidas": [
     "FOTO_01",
     "FOTO_02",
@@ -23,9 +23,7 @@
     "FOTO_17",
     "FOTO_18",
     "FOTO_19",
-    "FOTO_20"
-  ],
-  "pendientes": [
+    "FOTO_20",
     "FOTO_21",
     "FOTO_22",
     "FOTO_23",
@@ -36,7 +34,8 @@
     "FOTO_28",
     "FOTO_29"
   ],
-  "nota": "Las primeras 20 fotografías quedan fijas. La segunda carga debe integrarse sin eliminarlas, reemplazarlas ni modificarlas. La composición asimétrica espera a las 29.",
+  "pendientes": [],
+  "nota": "Las 29 fotografías están en el collage. FOTO_01 a FOTO_20 no se modificaron al integrar la segunda carga.",
   "fotos": [
     {
       "id": "FOTO_01",
@@ -203,6 +202,80 @@
       "ancho": 1508,
       "alto": 848,
       "alt": "Contra el muro de ladrillo."
+    },
+    {
+      "id": "FOTO_21",
+      "archivo": "fotos/foto-21.jpg",
+      "sha256": "bb4ca75f7dcd126639978de44845173f429dbc1888ce021e0cd20e5804f11166",
+      "ancho": 900,
+      "alto": 1600,
+      "alt": "Los dos con los cascos, frente al mural."
+    },
+    {
+      "id": "FOTO_22",
+      "archivo": "fotos/foto-22.jpg",
+      "sha256": "f338f767917d30685c3da03726c50aa1bcf0341cc68a198a3e4a2d62052f1042",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "De noche, junto a las luces del prado."
+    },
+    {
+      "id": "FOTO_23",
+      "archivo": "fotos/foto-23.jpg",
+      "sha256": "79f97da39a05726a8cd68bedd475904df56cc199fbc0434997f849c04a86eb6f",
+      "ancho": 900,
+      "alto": 1600,
+      "alt": "En el mirador, con el sombrero.",
+      "misma_escena_que_archivo_anterior": "fotos/mirador.jpg"
+    },
+    {
+      "id": "FOTO_24",
+      "archivo": "fotos/foto-24.jpg",
+      "sha256": "37c78f09f17667dd60304fc70ce209711f7119cdd6cdde059f1514edc50d4010",
+      "ancho": 900,
+      "alto": 1600,
+      "alt": "El abrazo, entre los bambúes.",
+      "misma_escena_que_archivo_anterior": "fotos/abrazo.jpg"
+    },
+    {
+      "id": "FOTO_25",
+      "archivo": "fotos/foto-25.jpg",
+      "sha256": "c425fd41313015ca3cc4471aa1369693f6616c923874842fa99c26fbc9185597",
+      "ancho": 1486,
+      "alto": 835,
+      "alt": "En las escaleras de concreto."
+    },
+    {
+      "id": "FOTO_26",
+      "archivo": "fotos/foto-26.jpg",
+      "sha256": "1615d8cb3c46ca811cd9a8c248bf86f920940ef72c9fc3ed131bea52c2278715",
+      "ancho": 830,
+      "alto": 1280,
+      "alt": "El beso, con el vestido rojo."
+    },
+    {
+      "id": "FOTO_27",
+      "archivo": "fotos/foto-27.jpg",
+      "sha256": "9fe422c2011c52aa0847640981543afe348b29486c1d62f5a35489e5223a9d86",
+      "ancho": 772,
+      "alto": 1601,
+      "alt": "El beso frente al espejo."
+    },
+    {
+      "id": "FOTO_28",
+      "archivo": "fotos/foto-28.jpg",
+      "sha256": "b782db095b0820041cc2c6ae347b6189f94424f446b9c516b89f4bb3f0754fcd",
+      "ancho": 1600,
+      "alto": 900,
+      "alt": "De noche, con la capucha amarilla."
+    },
+    {
+      "id": "FOTO_29",
+      "archivo": "fotos/foto-29.jpg",
+      "sha256": "b9c50079b83dee4752836f3525039cb48cf512e43bd6a9234e6d6ba2cc67ced1",
+      "ancho": 1528,
+      "alto": 859,
+      "alt": "Bajo el letrero de neón."
     }
   ]
 }

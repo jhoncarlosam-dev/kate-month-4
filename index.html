@@ -19,35 +19,35 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      container-type: inline-size;
     }
-    .nota,
     .cierre {
-      margin: 0;
+      margin: 4px 0 0;
       font: 500 16px/1.35 "Segoe UI", system-ui, sans-serif;
-    }
-    .nota {
-      color: #6d645b;
-      font-size: 14px;
     }
     .collage {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-flow: dense;
       gap: 8px;
       align-items: start;
     }
-    /*
-      Mapa de colocación.
-      Cada fotografía tiene el mismo HTML. Para reorganizar
-      el collage se cambia solo este bloque, no cada imagen.
-      Estado provisional (20 de 29): todas ocupan una celda.
-      La composición asimétrica espera a FOTO_21–FOTO_29.
-    */
     .collage .foto {
-      grid-column: span 1;
       position: relative;
       margin: 0;
-      aspect-ratio: 1;
+      aspect-ratio: 4 / 5;
       overflow: hidden;
+    }
+    .collage .foto:nth-child(3),
+    .collage .foto:nth-child(11),
+    .collage .foto:nth-child(14),
+    .collage .foto:nth-child(18),
+    .collage .foto:nth-child(21),
+    .collage .foto:nth-child(23),
+    .collage .foto:nth-child(24),
+    .collage .foto:nth-child(26),
+    .collage .foto:nth-child(27) {
+      aspect-ratio: 3 / 4;
     }
     .collage img {
       position: absolute;
@@ -55,43 +55,110 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 40%;
     }
-    .collage img:not([src]) {
-      display: none;
+    .collage .foto:nth-child(3) img,
+    .collage .foto:nth-child(11) img,
+    .collage .foto:nth-child(14) img,
+    .collage .foto:nth-child(18) img,
+    .collage .foto:nth-child(21) img,
+    .collage .foto:nth-child(23) img,
+    .collage .foto:nth-child(26) img,
+    .collage .foto:nth-child(27) img {
+      object-position: center center;
     }
-    .collage .foto:has(img:not([src])) {
-      border: 1px dashed #b7aea3;
-      display: grid;
-      place-items: center;
+    .collage .foto:nth-child(5),
+    .collage .foto:nth-child(9),
+    .collage .foto:nth-child(12) {
+      grid-column: 1 / -1;
+      aspect-ratio: 16 / 9;
     }
-    .collage .foto:has(img:not([src]))::before {
-      content: "FOTO_" attr(data-foto);
-      font: 500 12px/1 "Segoe UI", system-ui, sans-serif;
-      letter-spacing: 0.04em;
-      color: #8a8178;
+    .collage .foto:nth-child(5) img {
+      object-position: center bottom;
+    }
+    .collage .foto:nth-child(9) img {
+      object-position: 76% 42%;
+    }
+    .collage .foto:nth-child(10) img {
+      object-position: 42% 46%;
+    }
+    .collage .foto:nth-child(12) img {
+      object-position: center 62%;
     }
     @media (min-width: 800px) {
-      body { padding: 28px 0 40px; }
+      body { padding: 28px 0 48px; }
       main {
-        max-width: 980px;
-        padding: 16px 16px 26px;
+        max-width: 1080px;
+        padding: 18px 18px 28px;
       }
+      /*
+        Mapa de colocación.
+        Cada fotografía conserva el mismo HTML. Para reorganizar
+        el collage se cambia solo este bloque.
+      */
       .collage {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        --gap: 8px;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-auto-rows: calc((100cqi - 5 * var(--gap)) / 6 + var(--gap) / 4);
+        gap: var(--gap);
+        align-items: stretch;
       }
+      .collage .foto,
+      .collage .foto:nth-child(3),
+      .collage .foto:nth-child(11),
+      .collage .foto:nth-child(14),
+      .collage .foto:nth-child(18),
+      .collage .foto:nth-child(21),
+      .collage .foto:nth-child(23),
+      .collage .foto:nth-child(24),
+      .collage .foto:nth-child(26),
+      .collage .foto:nth-child(27) {
+        aspect-ratio: auto;
+        height: auto;
+      }
+      .collage .foto:nth-child(n) {
+        aspect-ratio: auto;
+      }
+      .collage .foto:nth-child(1) { grid-column: 3 / span 4; grid-row: 1 / span 2; }
+      .collage .foto:nth-child(2) { grid-column: 3 / span 4; grid-row: 9 / span 2; }
+      .collage .foto:nth-child(3) { grid-column: 1 / span 2; grid-row: 25 / span 4; }
+      .collage .foto:nth-child(4) { grid-column: 1 / span 2; grid-row: 7 / span 2; }
+      .collage .foto:nth-child(5) { grid-column: 1 / span 4; grid-row: 13 / span 2; }
+      .collage .foto:nth-child(6) { grid-column: 3 / span 4; grid-row: 11 / span 2; }
+      .collage .foto:nth-child(7) { grid-column: 1 / span 4; grid-row: 5 / span 2; }
+      .collage .foto:nth-child(8) { grid-column: 1 / span 2; grid-row: 15 / span 2; }
+      .collage .foto:nth-child(9) { grid-column: 3 / span 2; grid-row: 23 / span 2; }
+      .collage .foto:nth-child(10) { grid-column: 3 / span 4; grid-row: 25 / span 4; }
+      .collage .foto:nth-child(11) { grid-column: 5 / span 2; grid-row: 13 / span 4; }
+      .collage .foto:nth-child(12) { grid-column: 1 / span 4; grid-row: 21 / span 2; }
+      .collage .foto:nth-child(13) { grid-column: 3 / span 2; grid-row: 19 / span 2; }
+      .collage .foto:nth-child(14) { grid-column: 5 / span 2; grid-row: 21 / span 4; }
+      .collage .foto:nth-child(15) { grid-column: 1 / span 2; grid-row: 23 / span 2; }
+      .collage .foto:nth-child(16) { grid-column: 3 / span 2; grid-row: 7 / span 2; }
+      .collage .foto:nth-child(17) { grid-column: 5 / span 2; grid-row: 29 / span 2; }
+      .collage .foto:nth-child(18) { grid-column: 1 / span 2; grid-row: 17 / span 4; }
+      .collage .foto:nth-child(19) { grid-column: 3 / span 2; grid-row: 3 / span 2; }
+      .collage .foto:nth-child(20) { grid-column: 5 / span 2; grid-row: 31 / span 2; }
+      .collage .foto:nth-child(21) { grid-column: 5 / span 2; grid-row: 5 / span 4; }
+      .collage .foto:nth-child(22) { grid-column: 3 / span 2; grid-row: 15 / span 2; }
+      .collage .foto:nth-child(23) { grid-column: 1 / span 2; grid-row: 1 / span 4; }
+      .collage .foto:nth-child(24) { grid-column: 1 / span 2; grid-row: 9 / span 4; }
+      .collage .foto:nth-child(25) { grid-column: 3 / span 4; grid-row: 17 / span 2; }
+      .collage .foto:nth-child(26) { grid-column: 1 / span 2; grid-row: 29 / span 4; }
+      .collage .foto:nth-child(27) { grid-column: 3 / span 2; grid-row: 29 / span 4; }
+      .collage .foto:nth-child(28) { grid-column: 5 / span 2; grid-row: 3 / span 2; }
+      .collage .foto:nth-child(29) { grid-column: 5 / span 2; grid-row: 19 / span 2; }
     }
   </style>
 </head>
 <body>
   <main>
-    <p class="nota">Veinte fotografías identificadas. El collage sigue abierto: faltan las nueve restantes.</p>
     <!--
-      29 figuras con la misma estructura, en orden FOTO_01 a FOTO_29.
-      Este orden es la identidad de cada foto. No se reordena el HTML
-      para componer: la colocación vive en el mapa CSS de .collage.
-      FOTO_21 a FOTO_29 están reservadas y todavía no tienen archivo.
+      29 figuras iguales, en orden FOTO_01 a FOTO_29.
+      Ese orden es la identidad de cada foto.
+      La composición se cambia solo en el mapa CSS.
     -->
-    <section class="collage" aria-label="Collage en preparación, veinte de veintinueve fotografías">
+    <section class="collage" aria-label="Collage de cuatro meses.">
       <figure class="foto" data-foto="01">
         <img src="fotos/foto-01.jpg" alt="Los dos con las camisetas de Spider-Man, en el centro comercial." width="1600" height="719">
       </figure>
@@ -153,31 +220,31 @@
         <img src="fotos/foto-20.jpg" alt="Contra el muro de ladrillo." width="1508" height="848">
       </figure>
       <figure class="foto" data-foto="21">
-        <img alt="FOTO_21. Pendiente de la segunda carga.">
+        <img src="fotos/foto-21.jpg" alt="Los dos con los cascos, frente al mural." width="900" height="1600">
       </figure>
       <figure class="foto" data-foto="22">
-        <img alt="FOTO_22. Pendiente de la segunda carga.">
+        <img src="fotos/foto-22.jpg" alt="De noche, junto a las luces del prado." width="1600" height="900">
       </figure>
       <figure class="foto" data-foto="23">
-        <img alt="FOTO_23. Pendiente de la segunda carga.">
+        <img src="fotos/foto-23.jpg" alt="En el mirador, con el sombrero." width="900" height="1600">
       </figure>
       <figure class="foto" data-foto="24">
-        <img alt="FOTO_24. Pendiente de la segunda carga.">
+        <img src="fotos/foto-24.jpg" alt="El abrazo, entre los bambúes." width="900" height="1600">
       </figure>
       <figure class="foto" data-foto="25">
-        <img alt="FOTO_25. Pendiente de la segunda carga.">
+        <img src="fotos/foto-25.jpg" alt="En las escaleras de concreto." width="1486" height="835">
       </figure>
       <figure class="foto" data-foto="26">
-        <img alt="FOTO_26. Pendiente de la segunda carga.">
+        <img src="fotos/foto-26.jpg" alt="El beso, con el vestido rojo." width="830" height="1280">
       </figure>
       <figure class="foto" data-foto="27">
-        <img alt="FOTO_27. Pendiente de la segunda carga.">
+        <img src="fotos/foto-27.jpg" alt="El beso frente al espejo." width="772" height="1601">
       </figure>
       <figure class="foto" data-foto="28">
-        <img alt="FOTO_28. Pendiente de la segunda carga.">
+        <img src="fotos/foto-28.jpg" alt="De noche, con la capucha amarilla." width="1600" height="900">
       </figure>
       <figure class="foto" data-foto="29">
-        <img alt="FOTO_29. Pendiente de la segunda carga.">
+        <img src="fotos/foto-29.jpg" alt="Bajo el letrero de neón." width="1528" height="859">
       </figure>
     </section>
     <p class="cierre">4 meses. 20 de noviembre.</p>
